@@ -17,8 +17,11 @@ public class Accepter extends Thread{
             try {
                 UserSocket user = new UserSocket(listener.accept());
                 System.out.println("New User Connected!!");
-//                user.writer.write("Set your name >> " + "\n");
-//                user.writer.flush();
+                user.writer.write("Set your name >> " + "\n");
+                user.writer.flush();
+                user.setName(user.reader.readLine());
+
+
                 userList.add(user);
                 System.out.println("USER COUNT : " + userList.size());
             }catch(IOException e){

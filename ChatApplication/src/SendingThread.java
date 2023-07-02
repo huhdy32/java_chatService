@@ -3,16 +3,12 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class SendingThread extends Thread{
-    private Socket currSocket;
+    private UserSocket currSocket;
     Scanner sc = new Scanner(System.in);
     BufferedWriter writer;
-    public SendingThread(Socket socket){
-        try {
-            this.currSocket = socket;
-            writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    public SendingThread(UserSocket user){
+        this.currSocket = user;
+        writer = user.writer;
     }
     @Override
     public void run() {
@@ -20,18 +16,10 @@ public class SendingThread extends Thread{
             while(true){
                 System.out.print("Type a Message >> ");
                 String OutputMessage = sc.nextLine();
-                if (OutputMessage.equals("EXIT")){
-                    sc.close();
-                    System.out.println("Socket Closed!! Bye :)");
-                    writer.write("Socket Closed!! Bye :)" + "\n");
-                    writer.flush();
-                    this.currSocket.close();
-                }
                 writer.write(OutputMessage + "\n");
                 writer.flush();
-
             }
-        }catch(Exception e){
+        }catch(IOException e){
             e.printStackTrace();
             sc.close();
         }

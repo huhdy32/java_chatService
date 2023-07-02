@@ -1,26 +1,29 @@
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.Socket;
 
 public class ReceiveThread extends Thread{
-    private Socket currSocket;
+    private UserSocket currSocket;
     private BufferedReader reader;
-    public ReceiveThread (Socket socket){
-        try{
-            this.currSocket = socket;
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+    public ReceiveThread (UserSocket user){
+        this.currSocket = user;
+        reader = user.reader;
     }
 
 
     @Override
     public void run() {
         try{
-            while(reader.ready()) {
-                System.out.println(reader.readLine());
+            while(true) {
+                String message = reader.readLine();
+                if (message == null) {
+                    currSocket.writer.close();
+                    currSocket.reader.close();
+                    this.currSocket.close();
+                    System.out.println();
+                    System.out.println("-------The Connection is closed!-------");
+                    break;
+                }
+                System.out.println(message);
             }
         }catch(IOException e){
             e.printStackTrace();
