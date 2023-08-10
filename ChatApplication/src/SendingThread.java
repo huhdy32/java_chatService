@@ -14,7 +14,6 @@ public class SendingThread extends Thread{
     public void run() {
         try{
             while(true){
-                System.out.print("Type a Message >> ");
                 String OutputMessage = sc.nextLine();
                 writer.write(OutputMessage + "\n");
                 writer.flush();

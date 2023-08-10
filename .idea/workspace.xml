@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df56c06f-e23f-4296-9253-70aab529b8d4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ChatApplication/out/production/ChatClient/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatApplication/out/production/ChatClient/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatApplication/out/production/ChatClient/ReceiveThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatApplication/out/production/ChatClient/ReceiveThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatApplication/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatApplication/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatApplication/src/ReceiveThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatApplication/src/ReceiveThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/out/production/ChatServer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/out/production/ChatServer/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/out/production/ChatServer/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/out/production/ChatServer/MessageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/MessageController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Sbr0n26O1t6HRMUpFRYtfprYxv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yoon/Projects/Chat&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df56c06f-e23f-4296-9253-70aab529b8d4" name="Changes" comment="" />
+      <created>1689425900341</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689425900341</updated>
+      <workItem from="1689425903430" duration="33000" />
+      <workItem from="1690439681590" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

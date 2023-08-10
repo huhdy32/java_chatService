@@ -6,28 +6,23 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Accepter extends Thread{
 
     private ServerSocket listener;
-    private CopyOnWriteArrayList userList;
-    public Accepter(ServerSocket listener, CopyOnWriteArrayList userlist) {
+    private UserListController userListController;
+    public Accepter(ServerSocket listener, UserListController userListController) {
         this.listener=listener;
-        this.userList=userlist;
+        this.userListController = userListController;
     }
     @Override
     public void run() {
         while(true){
             try {
+                System.out.println("========== [서버 연결 대기중]");
                 UserSocket user = new UserSocket(listener.accept());
-                System.out.println("New User Connected!!");
-                user.writer.write("Set your name >> " + "\n");
-                user.writer.flush();
-                user.setName(user.reader.readLine());
 
-
-                userList.add(user);
-                System.out.println("USER COUNT : " + userList.size());
+                ReceivingThread RT = new ReceivingThread(user, userListController);
+                RT.start();
             }catch(IOException e){
                 e.printStackTrace();
             }
         }
     }
-
 }
